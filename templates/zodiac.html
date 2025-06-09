@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 计算器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  {% include 'header.html' %}
+  <h1>星座判断</h1>
+  <form method="POST">
+    <label>生日（月-日）：<input type="text" name="birth" placeholder="例如 03-14" required></label><br>
+    <input type="submit" value="查看星座">
+  </form>
+  {% if result %}
+    <p>你的星座是：{{ result }}</p>
+  {% endif %}
+
+    <a href="/">← 返回首页</a
+     {% include 'footer.html' %}
+</body>
+</html>

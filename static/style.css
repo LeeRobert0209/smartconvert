@@ -1,0 +1,78 @@
+/* 通用样式 */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+
+  /* ✅ 页面宽度适配 */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  font-size: 2rem; /* ✅ 使用相对单位 */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #4CAF50;
+}
+
+/* ✅ 添加响应式导航、内容区域等 */
+nav {
+  padding: 10px;
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav div a {
+  margin: 0 8px;
+}
+
+/* ✅ 响应式字体和布局：适配小屏幕 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav div {
+    margin-top: 10px;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+}

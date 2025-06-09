@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 计算器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  {% include 'header.html' %}
+    <h1>公历转农历（占位版）</h1>
+    <form method="POST">
+      <label>日期（YYYY-MM-DD）：<input type="text" name="date" required></label><br>
+      <input type="submit" value="转换">
+    </form>
+    {% if result %}
+      <p>农历（仅演示）：{{ result }}</p>
+    {% endif %}
+
+    <a href="/">← 返回首页</a>
+  {% include 'footer.html' %}
+</body>
+</html>

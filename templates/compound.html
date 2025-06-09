@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 计算器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  {% include 'header.html' %}
+  <h1>复利计算器</h1>
+  <form method="POST">
+    <label>本金（元）：<input type="number" name="principal" required></label><br>
+    <label>年利率（%）：<input type="number" name="rate" required></label><br>
+    <label>年数：<input type="number" name="years" required></label><br>
+    <input type="submit" value="计算">
+  </form>
+  {% if result %}
+    <p>{{ years }} 年后的复利总额为：{{ result }} 元</p>
+  {% endif %}
+
+
+    <a href="/">← 返回首页</a>
+  {% include 'footer.html' %}
+</body>
+</html>

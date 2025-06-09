@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 计算器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  {% include 'header.html' %}
+  <h2>五险一金计算器</h2>
+  <form method="POST">
+    <label>月工资：<input type="number" name="salary" required></label><br>
+    <input type="submit" value="计算">
+  </form>
+  {% if result %}
+    <p>你的五险一金扣除总额约为：{{ result }} 元</p>
+  {% endif %}
+  <a href="/">← 返回首页</a>
+  {% include 'footer.html' %}
+</body>
+</html>
